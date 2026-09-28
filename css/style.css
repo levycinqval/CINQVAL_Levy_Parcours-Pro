@@ -1,0 +1,326 @@
+/* =========================================================
+   MON PARCOURS PROFESSIONNEL MMI — style.css
+   Séance 1 : premier style simple et lisible.
+   Palette inspirée de mon univers graphique personnel
+   (bleu / cyan sur fond sombre) mais volontairement plus
+   sobre : cette application est un projet pédagogique
+   distinct de mon portfolio personnel.
+   ========================================================= */
+
+:root {
+  --bg: #0b0f19;
+  --bg-alt: #111827;
+  --card: #141c2c;
+  --text: #e6ebf3;
+  --text-muted: #9aa5b8;
+  --primary: #22c1e0;
+  --accent: #3b82f6;
+  --border: rgba(34, 193, 224, 0.22);
+  --radius: 0.75rem;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --max-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--primary);
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.site-header h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ---------- NAV ---------- */
+.page-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.page-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.35rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible {
+  color: var(--primary);
+  background-color: rgba(34, 193, 224, 0.08);
+  outline: none;
+}
+
+/* ---------- MAIN / SECTIONS ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-intro {
+  color: var(--text-muted);
+}
+
+.loading {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- STAGE ---------- */
+.stage-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.stage-card p {
+  margin: 0 0 0.5rem;
+}
+
+.stage-label {
+  display: inline-block;
+  min-width: 130px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.stage-accroche {
+  margin-top: 1.25rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- MISSIONS ---------- */
+.missions-compteur {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.missions-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.mission-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.mission-card:hover,
+.mission-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  outline: none;
+}
+
+.mission-index {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.mission-titre {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.mission-categorie {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.12);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.mission-description {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.75rem;
+}
+
+.mission-outils {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mission-outils li {
+  font-size: 0.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  color: var(--text);
+}
+
+/* ---------- OUTILS ---------- */
+.outils-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.outils-liste li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- BILAN ---------- */
+.bilan-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.bilan-bloc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.bilan-bloc h3 {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.bilan-bloc p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.note-confidentialite {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--primary);
+  padding-left: 0.75rem;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .page-nav {
+    gap: 0.75rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .stage-label {
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+}

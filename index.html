@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon parcours professionnel MMI — Lévy CINQ-VAL</title>
+  <meta name="description" content="Application personnelle présentant mon parcours professionnel MMI : stage, missions, outils et bilan." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">R3.12 — Développement Front &amp; Intégration</p>
+      <h1>MON PARCOURS PROFESSIONNEL MMI</h1>
+      <p class="subtitle">Lévy CINQ-VAL — BUT MMI, 1ère année</p>
+    </div>
+  </header>
+
+  <nav class="page-nav" aria-label="Navigation de la page">
+    <a href="#stage">Mon stage</a>
+    <a href="#missions">Mes missions</a>
+    <a href="#outils">Mes outils</a>
+    <a href="#bilan">Mon bilan</a>
+  </nav>
+
+  <main>
+
+    <!-- ===================== MON STAGE DE BUT1 ===================== -->
+    <section id="stage" class="section">
+      <h2>MON STAGE DE BUT1</h2>
+      <div id="stage-info" aria-live="polite">
+        <!-- Contenu injecté dynamiquement par js/app.js à partir de l'objet "stage" -->
+        <p class="loading">Chargement des informations du stage…</p>
+      </div>
+    </section>
+
+    <!-- ===================== MES MISSIONS ===================== -->
+    <section id="missions" class="section">
+      <h2>MES MISSIONS</h2>
+      <p id="missions-compteur" class="missions-compteur"></p>
+      <div id="missions-liste" class="missions-grille" aria-live="polite">
+        <!-- Cartes générées dynamiquement par js/app.js à partir du tableau "missions" -->
+        <p class="loading">Chargement des missions…</p>
+      </div>
+    </section>
+
+    <!-- ===================== MES OUTILS ===================== -->
+    <section id="outils" class="section">
+      <h2>MES OUTILS</h2>
+      <p class="section-intro">
+        Les logiciels et outils utilisés régulièrement au cours de mon stage chez SmartPlay.
+      </p>
+      <ul class="outils-liste">
+        <li>Adobe Photoshop</li>
+        <li>Procreate</li>
+        <li>Canva</li>
+        <li>Affinity Designer / Affinity Photo</li>
+        <li>CapCut</li>
+        <li>DaVinci Resolve</li>
+        <li>Instagram</li>
+      </ul>
+    </section>
+
+    <!-- ===================== MON BILAN ===================== -->
+    <section id="bilan" class="section">
+      <h2>MON BILAN</h2>
+
+      <div class="bilan-grille">
+        <div class="bilan-bloc">
+          <h3>Ce que j'ai appris</h3>
+          <p>
+            J'ai découvert le processus de validation des supports de communication (BAT),
+            les techniques de covering publicitaire sur véhicules, ainsi que la création de
+            contenus digitaux pour les réseaux sociaux. J'ai également renforcé ma rigueur,
+            mon autonomie et ma capacité à m'adapter à des projets variés dans un environnement
+            professionnel réel.
+          </p>
+        </div>
+        <div class="bilan-bloc">
+          <h3>Ce que je souhaite approfondir</h3>
+          <p>
+            Je souhaite continuer à progresser en montage vidéo et motion design (notamment
+            avec DaVinci Resolve), et développer davantage mes compétences en développement
+            web afin de construire mon propre profil de créateur de contenus et de développeur
+            front-end.
+          </p>
+        </div>
+      </div>
+
+      <p class="note-confidentialite">
+        ⚠️ Les contenus présentés dans cette application respectent la confidentialité des
+        informations internes de mon ancienne entreprise : aucune donnée confidentielle n'est
+        publiée ici.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Séance 1 — Version fonctionnelle de base (données dynamiques : objet <code>stage</code> + tableau <code>missions</code>).</p>
+    <p>[À RENSEIGNER] : photo de profil, liens vers mon portfolio complet et mes réseaux professionnels — à ajouter lors d'une prochaine séance.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
